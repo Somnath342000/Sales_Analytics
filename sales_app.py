@@ -29,7 +29,7 @@ image_paths_3 = [
 placeholder_1 = st.empty()  # Empty placeholder to refresh the image
 for i in range(len(image_paths_3)):
     placeholder_1.image(image_paths_3[i], caption="Sales Analytics by Somnath", use_container_width=True)
-    time.sleep(1)  # Wait for 2 seconds before displaying the next image
+    time.sleep(5)  # Wait for 2 seconds before displaying the next image
 
 
 st.write('''What is this? 
