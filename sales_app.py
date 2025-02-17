@@ -53,7 +53,7 @@ uploaded_file2 = st.file_uploader("Upload Sales Data Excel File", type=["xlsx"],
 # Check if file is uploaded
 if uploaded_file2:
     try:
-        df = pd.read_csv(uploaded_file2)
+        df = pd.read_excel(uploaded_file2)
         st.success("File uploaded successfully!")
 
         # Data Overview
