@@ -40,7 +40,7 @@ st.write('''What is this?
 
 st.write('''How to use? 
             To use this you have click on this link to download the sample dummy data which is just 2MB, 
-            Download link is : https://docs.google.com/spreadsheets/d/12h_yB87LM94vXw6kFBbe_I3tGkq-GSRy/edit?usp=sharing&ouid=110430024153326232778&rtpof=true&sd=true 
+            Download link is : https://drive.google.com/file/d/1l3ixYZ3YtFV9AfcXSqgWNYcrATskqfRD/view?usp=sharing     
             after download the Somnath_Techstore_Dummy_Data_(2023-24).xlsx file click on "Browse Files" button & after that it will open to "files explorer/Manager" then 
             go to download folder and click on the downloaded dummy data ''')
 
@@ -48,12 +48,12 @@ st.write('''My other project link : https://movieexplorationsuggestion-somnath.s
 
 
 # File Uploader
-uploaded_file2 = st.file_uploader("Upload Sales Data Excel File", type=["xlsx"], key="file2")
+uploaded_file2 = st.file_uploader("Upload Sales Data Excel File", type=["csv"], key="file2")
 
 # Check if file is uploaded
 if uploaded_file2:
     try:
-        df = pd.read_excel(uploaded_file2)
+        df = pd.read_csv(uploaded_file2)
         st.success("File uploaded successfully!")
 
         # Data Overview
