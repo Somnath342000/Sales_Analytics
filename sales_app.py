@@ -335,10 +335,6 @@ if uploaded_file2:
 
         # Descriptive Analytics: Sales Trend
         st.subheader("📈 Sales Trend Over Time")
-        df['Year'] = df['Date'].dt.year
-        df['Month'] = df['Date'].dt.month
-        df['Day'] = df['Date'].dt.day  # Day of the month
-        df['Weekday'] = df['Date'].dt.weekday  # Weekday (0=Monday, 6=Sunday)
 
         # Plot average sales by the day of the week (Weekday)
         df.groupby('Weekday')['Sales'].mean().plot(kind="line", marker='o', figsize=(7, 3))
@@ -488,13 +484,6 @@ if uploaded_file2:
             # Provide the PDF as a downloadable file
             with open(report_file, "rb") as file:
                 st.download_button("Download PDF", file, file_name=report_file)
-
-        # Trigger Alerts
-        #if total_sales < df["Sales"].sum() * 0.85:
-        #    alert_msg = "⚠ URGENT: Sales have dropped by more than 15%! Immediate action needed."
-         #   st.warning(alert_msg)
-         #   send_alert_sms(alert_msg)
-         #   send_alert_whatsapp(alert_msg)
 
     except Exception as e:
         st.error(f"An error occurred: {e}")
