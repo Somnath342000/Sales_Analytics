@@ -48,7 +48,7 @@ st.write('''My other project link : https://movieexplorationsuggestion-somnath.s
 
 
 # File Uploader
-uploaded_file2 = st.file_uploader("Upload Sales Data Excel File", type=["csv"], key="file2")
+uploaded_file2 = st.file_uploader("Upload Sales Data Csv File", type=["csv"], key="file2")
 
 # Check if file is uploaded
 if uploaded_file2:
