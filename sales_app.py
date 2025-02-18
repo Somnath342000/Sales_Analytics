@@ -9,14 +9,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error  # Import this line
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
-from twilio.rest import Client
 import datetime
 import matplotlib.pyplot as plt 
-import time
 import warnings
 
 st.header("Welcome to Sales Data Analytics Project")
-st.image('salesapp2.jpg', caption='Welcome to sales dashboard & forcating', use_column_width=True)
+st.image('salesapp2.jpg', caption='Welcome to sales dashboard & forcating', use_container_width=True)
 
 st.write('''What is this? 
             Hi, Myself Somnath Banerjee, Mail ID : somnathbanerjee342000@gmail.com 
@@ -27,7 +25,7 @@ st.write('''What is this?
 st.write('''How to use? 
             To use this you have click on this link to download the sample dummy data which is just 2MB, 
             Download link is : https://drive.google.com/file/d/1l3ixYZ3YtFV9AfcXSqgWNYcrATskqfRD/view?usp=sharing     
-            after download the Somnath_Techstore_Dummy_Data_(2023-24).xlsx file click on "Browse Files" button & after that it will open to "files explorer/Manager" then 
+            after download the Somnath_Techstore_Dummy_Data_(2023-24).csv file click on "Browse Files" button & after that it will open to "files explorer/Manager" then 
             go to download folder and click on the downloaded dummy data ''')
 
 st.write('''My other project link : https://movieexplorationsuggestion-somnath.streamlit.app/''')
