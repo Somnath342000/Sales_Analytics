@@ -349,7 +349,7 @@ if uploaded_file2:
         # Diagnostic Analytics: Price vs Sales
         st.subheader("🔍 Price vs Qty Analysis")
         fig, ax = plt.subplots(figsize=(8, 4))
-        sns.scatterplot(x=df["Price"], y=df["Qty"], hue=df["Product"], ax=ax)
+        sns.scatterplot(x=df["Price"], y=df["Sales"], hue=df["Product"], ax=ax)
         st.pyplot(fig)
 
         # Visualizing Customer Segmentation
