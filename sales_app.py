@@ -335,7 +335,7 @@ if uploaded_file2:
 
         # Descriptive Analytics: Sales Trend
         st.subheader("📈 Sales Trend Over Time")
-
+        df['Weekday'] = df['Date'].dt.weekday  # Weekday (0=Monday, 6=Sunday)
         # Plot average sales by the day of the week (Weekday)
         df.groupby('Weekday')['Sales'].mean().plot(kind="line", marker='o', figsize=(7, 3))
 
