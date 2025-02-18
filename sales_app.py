@@ -16,21 +16,7 @@ import time
 import warnings
 
 st.header("Welcome to Sales Data Analytics Project")
-
-#st.image("salesapp2.png", caption="Welcome to sales dashboard & forcating", use_column_width=True)
-# List of the first 4 images for the slideshow
-image_paths_3 = [
-    "salesapp3.jpg",
-    "salesapp1.jpg",
-    "salesapp2.jpg",
-]
-
-# Create a slideshow for the first 3 images with a 2-second interval
-placeholder_1 = st.empty()  # Empty placeholder to refresh the image
-for i in range(len(image_paths_3)):
-    placeholder_1.image(image_paths_3[i], caption="Sales Analytics by Somnath", use_container_width=True)
-    time.sleep(8)  # Wait for 8 seconds before displaying the next image
-
+st.image('salesapp2.jpg', caption='Welcome to sales dashboard & forcating', use_column_width=True)
 
 st.write('''What is this? 
             Hi, Myself Somnath Banerjee, Mail ID : somnathbanerjee342000@gmail.com 
@@ -336,22 +322,19 @@ if uploaded_file2:
         # Streamlit Output
         st.header("📊 Sales Analysis")
         st.write(f"**Mean Absolute Error (MAE) on Test Data:** {mae:.2f}")
+        st.header("📊 Delivery Time vs Sales (Line Chart)")
 
-        # Scatter plot for Delivery Time vs Sales using Seaborn
-        st.header("📊 Delivery Time vs Sales (Scatter Plot)")
-
-        # Create the scatter plot
+        # Create the line plot
         plt.figure(figsize=(5, 3))
-        sns.scatterplot(x=df["Delivery_Time"], y=df["Sales"])
-
+        sns.lineplot(x=df["Delivery_Time"], y=df["Sales"])
+        
         # Adding titles and labels
         plt.title("Delivery Time vs Sales")
         plt.xlabel("Delivery Time (Days)")
         plt.ylabel("Sales")
-
         # Display the plot in Streamlit
         st.pyplot(plt)
-        
+
         # Descriptive Analytics: Sales Trend
         st.subheader("📈 Sales Trend Over Time")
         df['Year'] = df['Date'].dt.year
@@ -507,24 +490,6 @@ if uploaded_file2:
             # Provide the PDF as a downloadable file
             with open(report_file, "rb") as file:
                 st.download_button("Download PDF", file, file_name=report_file)
-
-        # Twilio Setup
-        TWILIO_SID = "your_account_sid"
-        TWILIO_AUTH_TOKEN = "your_auth_token"
-        TWILIO_PHONE = "your_twilio_number"
-        ADMIN_PHONE = "your_admin_phone_number"
-
-        client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
-
-        def send_alert_sms(message):
-            client.messages.create(body=message, from_=TWILIO_PHONE, to=ADMIN_PHONE)
-
-        def send_alert_whatsapp(message):
-            client.messages.create(
-                body=message,
-                from_="whatsapp:" + TWILIO_PHONE,
-                to="whatsapp:" + ADMIN_PHONE
-            )
 
         # Trigger Alerts
         #if total_sales < df["Sales"].sum() * 0.85:
