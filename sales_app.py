@@ -337,7 +337,7 @@ try:
         st.pyplot(plt)
 
         # Diagnostic Analytics: Price vs Sales
-        st.subheader("🔍 Price vs Qty Analysis")
+        st.subheader("🔍 Price vs Sales Analysis")
         fig, ax = plt.subplots(figsize=(8, 4))
         sns.scatterplot(x=df["Price"], y=df["Sales"], hue=df["Product"], ax=ax)
         st.pyplot(fig)
