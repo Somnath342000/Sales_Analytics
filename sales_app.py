@@ -475,5 +475,3 @@ try:
 
 except Exception as e:
         st.error(f"An error occurred: {e}")
-else:
-    st.warning("⚠ Please upload a file to get started!")
