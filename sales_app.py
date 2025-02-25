@@ -22,7 +22,8 @@ st.write('''What is this?
             For any important decision making purpose I have to analyse the data for calculating the business performance.
             I have a dummy sales data of my store (asume not real) & the l am putting the link of it''')
 
-st.write('''My other project link : https://movieexplorationsuggestion-somnath.streamlit.app/''')
+st.write('''My other project link (Movie Exploration) : https://movieexplorationsuggestion-somnath.streamlit.app/''')
+st.write('''My other project link  (Bengali Audio Story Dictionary) :  https://bengaliaudiostorysomnathbanerjee.streamlit.app/''')
 
 # URL of the raw CSV file on GitHub
 github_url = "https://raw.githubusercontent.com/Somnath342000/Sales_Analytics/main/Somnath_techstore_Dummy_Data_(2023-24).csv"
